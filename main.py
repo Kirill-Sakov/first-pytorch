@@ -51,7 +51,7 @@ class NeuralNetwork(nn.Module):
 
 
 nn_model = NeuralNetwork().to(device)
-epochs = 10
+epochs = 100
 learning_rate = 1e-3
 loss_function = nn.CrossEntropyLoss()
 nn_optimizer = torch.optim.SGD(nn_model.parameters(), lr=learning_rate)
