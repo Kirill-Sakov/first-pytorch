@@ -89,11 +89,11 @@ def test_loop(data_loader, model, loss_fn):
     print(f"Test Error: \n Accuracy: {(100*correct):>0.1f}%, Avg loss: {test_loss:>8f}\n")
 
 
-tic = time.process_time()
+start_time = time.process_time()
 for t in range(epochs):
     print(f"Epoch {t+1}\n--------------------------------")
     train_loop(train_data_loader, nn_model, loss_function, nn_optimizer)
     test_loop(test_data_loader, nn_model, loss_function)
-toc = time.process_time()
-print(f"Done! Time: {tic - toc}")
+stop_time = time.process_time()
+print(f"Done! Time: {stop_time - start_time}")
 
